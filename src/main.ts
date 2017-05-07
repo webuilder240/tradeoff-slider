@@ -4,10 +4,10 @@ import * as $ from 'jquery';
 
 $(function(){
 
-	var elementCount = 1;
+	let elementCount: number = 1;
 
 	//最初に4つ生成する
-	var initFields = [
+	let initFields: string[] = [
 		'スコープ',
 		'予算',
 		'品質',
@@ -24,30 +24,28 @@ $(function(){
 
 	$(document).on('input','.slider__wrapper__slider',function(){
 
-		var value = $(this).val();
-		var mainWrapper = $(this).parent();
+		var slider_value:number = parseInt($(this).val());
+		var mainWrapper:JQuery = $(this).parent();
 
-		if (value === "5"){
+		if (slider_value === 5){
 			mainWrapper.find('.slider__wrapper__label__max').addClass('slider__wrapper__label__max--alert');
 		} else {
 			mainWrapper.find('.slider__wrapper__label__max').removeClass('slider__wrapper__label__max--alert');
 		}
 
-		if (value === "1"){
+		if (slider_value === 1){
 			mainWrapper.find('.slider__wrapper__label__min').addClass('slider__wrapper__label__min--alert');
 		} else {
 			mainWrapper.find('.slider__wrapper__label__min').removeClass('slider__wrapper__label__min--alert');
 		}
 
-		mainWrapper.find('.slider__wrapper__point').text(value);
-
+		mainWrapper.find('.slider__wrapper__point').text(slider_value);
 	});
 
 });
 
-function addSlider(elementNum: number, fieldName: string){
-
-	var htmlElements = [];
+function addSlider(elementNum: number, fieldName: string) : number {
+	var htmlElements : string[] = [];
 
 	htmlElements.push('<div class="slider__main__wrapper">');
 	htmlElements.push('<input type="text" class="slider__wrapper__nameinput" name="element_'+elementNum+'_colom" value="'+fieldName+'" size="10" >');
@@ -56,9 +54,7 @@ function addSlider(elementNum: number, fieldName: string){
 	htmlElements.push('<span class="slider__wrapper__label__max">MAX</span>');
 	htmlElements.push('<span class="slider__wrapper__point">3</span>');
 	htmlElements.push('</div>');
-
-	var htmlElementsString = htmlElements.join('');
+	var htmlElementsString : string = htmlElements.join('');
 	$('.slider__main').append(htmlElementsString);
-
 	return elementNum+=1;
 }
