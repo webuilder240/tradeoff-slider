@@ -1,0 +1,22 @@
+{
+  "name": "tradeoff-slider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/webuilder240/tradeoff-slider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webuilder240/tradeoff-slider/issues"
+  },
+  "homepage": "https://github.com/webuilder240/tradeoff-slider#readme",
+  "devDependencies": {
+    "ts-loader": "^2.0.3"
+  }
+}
