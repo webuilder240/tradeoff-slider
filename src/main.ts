@@ -1,3 +1,7 @@
+// import 'jquery';
+import * as $ from 'jquery';
+
+
 $(function(){
 
 	var elementCount = 1;
@@ -41,7 +45,7 @@ $(function(){
 
 });
 
-function addSlider(elementNum,fieldName){
+function addSlider(elementNum: number, fieldName: string){
 
 	var htmlElements = [];
 

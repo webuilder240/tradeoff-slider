@@ -20,6 +20,11 @@
   "devDependencies": {
     "ts-loader": "^0.9.5",
     "typescript": "^2.0.3",
+    "webpack": "2.2.1",
+    "jquery": "^2.0.0",
     "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "@types/jquery": "^2.0.43"
   }
 }

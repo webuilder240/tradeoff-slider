@@ -8,7 +8,6 @@ module.exports = {
       path: '/build',        // webpack処理したファイルの出力先フォルダ
       publicPath: '/js',     // webpack処理したファイルの公開時のフォルダ
       filename: '[name].js'  // webpack処理したファイルのファイル名
-                             // [name]はentry設定での出力アイテム名が自動的に適用される
     },
     devServer: {
       contentBase: 'public'  // webpack-dev-serverの公開フォルダ
@@ -16,7 +15,7 @@ module.exports = {
     resolve: {
         // requireしたファイル（Webpack処理の対象ファイル）に適用される拡張子
         // 左端の空文字列はrequireで拡張子をつけて指定した場合に必要となる
-        extensions:['','.ts','.webpack.js','.web.js','.js']
+        extensions:['*','.ts','.webpack.js','.web.js','.js']
     },
     module: {
          // ローダー(Webpack処理の内容を決定するモジュール)の設定
